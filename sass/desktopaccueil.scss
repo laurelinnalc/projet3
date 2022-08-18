@@ -1,0 +1,69 @@
+@use "_site-base.scss";
+
+aside {
+  h3 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  .button_fonction {
+    flex-direction: row;
+
+    a {
+      .numberorder {
+        margin: 0px 0px 0px -17px;
+        margin-top: -2px;
+      }
+
+      p span {
+        font-size: 0.9em;
+      }
+    }
+  }
+  p {
+    padding-right: 20px;
+  }
+}
+section {
+  h3 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+  .card_restaurant {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .card_item {
+      display: flex;
+      width: 35%;
+      margin-right: 30px;
+
+      .fa-heart:hover {     
+        background-image: linear-gradient(90deg, #9356dc, #ff79da);
+        animation: heartcolor 0.3s ease;
+        background-clip: text;
+        color: transparent;
+        font-weight: bolder; /*le coeur devient violet*/
+        cursor: pointer;
+
+
+      
+
+
+      }
+    }
+  }
+}
+
+footer {
+  h5 {
+    font-size: 20px;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}

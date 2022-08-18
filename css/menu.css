@@ -1,0 +1,349 @@
+@charset "UTF-8";
+/*MAIN*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Roboto-regular";
+  src: url("/fonts/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto-thin";
+  src: url("/fonts/Roboto-Thin.ttf");
+}
+@font-face {
+  font-family: "Roboto-bold";
+  src: url("/fonts/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: "Roboto-light";
+  src: url("/fonts/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: "Roboto-medium";
+  src: url("/fonts/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: "Shrikhand";
+  src: url("/fonts/Shrikhand-Regular.ttf");
+}
+body {
+  /*background-color: #99E2D0;*/
+  font-family: "Roboto-regular";
+}
+
+/*BLOC AND INSIDE BLOC*/
+.bloc__content {
+  width: 100%;
+  background-color: white;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+a:visited {
+  color: inherit;
+}
+
+footer {
+  padding: 20px 0 31px 35px;
+  background-color: #353535;
+  color: #ffffff;
+}
+footer h5 {
+  font-family: "Shrikhand";
+  font-size: 1.3em;
+  margin: 5px 0 15px 0;
+}
+footer ul {
+  list-style-type: none;
+}
+footer ul li {
+  font-family: "Roboto-medium";
+  padding-bottom: 5px;
+}
+footer ul li i {
+  padding-right: 5px;
+  font-size: 11px;
+}
+footer ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+footer ul li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes heartcolor {
+  0% {
+    opacity: 0.3;
+    background-image: linear-gradient(0deg, #9356dc 10%, white 20%, #ff79da 100%);
+  }
+  20% {
+    opacity: 0.4;
+    background-image: linear-gradient(0deg, #9356dc 10%, white 40%, #ff79da 100%);
+  }
+  50% {
+    opacity: 0.6;
+    background-image: linear-gradient(0deg, #9356dc 10%, white 60%, #ff79da 100%);
+  }
+  70% {
+    opacity: 0.8;
+    background-image: linear-gradient(0deg, #9356dc 10%, white 80%, #ff79da 100%);
+  }
+  100% {
+    opacity: 1;
+    background-image: linear-gradient(0deg, #9356dc 10%, white 100%, #ff79da 100%);
+  }
+}
+@keyframes quarterspin { /*rotate check point*/
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+body {
+  background-color: #f6f6f6;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+header .return {
+  position: absolute;
+  left: 20px;
+  top: -13px;
+  max-width: 1440px;
+}
+header i {
+  margin-top: 33px;
+  color: rgb(15, 11, 2);
+  font-size: 1.8em;
+}
+header h1 {
+  font-family: "Shrikhand";
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+header h1 span {
+  display: flex;
+}
+
+.cover {
+  display: flex;
+  justify-content: center;
+  background-color: aquamarine;
+}
+.cover .cover_img {
+  width: 100%;
+  object-fit: cover;
+  height: 46vh;
+}
+
+/*CONTAINER*/
+.container {
+  display: flex;
+  background-color: #f6f6f6;
+}
+.container .title_restaurant .menu_title {
+  font-family: "Shrikhand";
+}
+.container .title_restaurant .menu_title i.fa-regular.fa-heart {
+  padding-left: 25px;
+  font-size: 0.9em;
+  position: absolute;
+  right: 45px;
+  top: 31px;
+}
+.container .title_restaurant .menu_title .fa-heart:active {
+  background-image: linear-gradient(90deg, #9356dc, #ff79da);
+  animation: heartcolor 0.3s ease;
+  background-clip: text;
+  color: transparent;
+  font-weight: bolder; /*le coeur devient violet*/
+  cursor: pointer;
+}
+.container main {
+  background-color: #f6f6f6;
+  border-radius: 30px 30px 0px 0px;
+  width: 100%;
+  position: relative;
+  top: -30px;
+  margin-top: 5px;
+  padding: 24px 20px 0px 20px;
+}
+.container main section {
+  display: block;
+  overflow: hidden;
+  animation-delay: 3s;
+}
+.container main section .bloc_element.menu1 {
+  animation: 0.9s appear 0.2s;
+}
+.container main section .bloc_element.menu2 {
+  animation: 0.9s appear 0.4s;
+}
+.container main section .bloc_element.menu3 {
+  animation: 0.9s appear 0.6s;
+}
+.container main section .bloc_element.menu4 {
+  animation: 0.9s appear 0.8s;
+}
+.container main section .bloc_element.menu5 {
+  animation: 0.9s appear 1s;
+}
+.container main section .bloc_element.menu6 {
+  animation: 0.9s appear 1.2s;
+}
+.container main section .bloc_element.menu7 {
+  animation: 0.9s appear 1.4s;
+}
+.container main section .bloc_element.menu8 {
+  animation: 0.9s appear 1.6s;
+}
+.container main section .bloc_element.menu9 {
+  animation: 0.9s appear 1.8s;
+}
+.container main section .menu {
+  border: 0;
+}
+.container main section .menu .menu_title {
+  border-bottom: 3px solid #99e2d0;
+  padding-bottom: 5px;
+  width: 45px;
+  font-family: "Roboto-light";
+  font-size: 15px;
+  margin-bottom: 20px;
+  margin-top: 45px;
+  text-transform: uppercase;
+}
+.container main section .menu .bloc__content {
+  background-color: white;
+  border-radius: 1rem; /*changer en px*/
+  overflow: hidden;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.container main section .menu .bloc__content__item {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap; /*Force le texte à rester sur une ligne*/
+  text-overflow: ellipsis;
+}
+.container main section .menu .bloc__content__price {
+  margin-left: auto;
+  font-weight: 900;
+  padding: 1rem; /*changer en px*/
+  display: flex;
+  align-items: flex-end;
+}
+.container main section .menu .bloc__content__details {
+  padding: 1rem;
+  overflow: hidden;
+}
+.container main section .menu .bloc__content__details h4, .container main section .menu .bloc__content__details p {
+  overflow: hidden;
+  white-space: nowrap; /*Force le texte à rester sur une ligne*/
+  text-overflow: ellipsis;
+}
+.container main section .menu .bloc__content__details h4 {
+  font-family: "Roboto-medium";
+  font-size: 18px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.container main section .menu .bloc__content__details p {
+  font-family: "Roboto-light";
+  font-size: 16px;
+}
+.container main section .menu .bloc__content__check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*changer en px*/
+  background-color: #99e2d0;
+  margin-right: -4rem; /*changer en px*/
+  width: 4rem;
+  border-radius: 0 1rem 1rem 0; /*changer en px*/
+  transition: margin-right 0.5s;
+  flex-shrink: 0;
+}
+.container main section .menu .bloc__content__check i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  aspect-ratio: 1/1;
+  width: 1.5rem;
+  border-radius: 1rem;
+  color: #99e2d0;
+  font-size: 29px;
+}
+.container main section .menu .bloc__content:hover .bloc__content__check {
+  margin-right: 0;
+}
+.container main section .menu .bloc__content:hover i {
+  animation: quarterspin 0.5s ease-in-out;
+}
+
+.button__buy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 90px;
+}
+.button__buy button {
+  background-image: linear-gradient(90deg, #9356dc, #ff79da);
+  border: none;
+  border-radius: 38px;
+  height: 46px;
+  width: 163px;
+  /*box-shadow: 4px 5px 6px #0000002E;*/
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.button__buy button .button__title {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+}
+.button__buy button:hover {
+  cursor: pointer;
+  transform: translate(0, -6px);
+}
+
+/*# sourceMappingURL=menu.css.map */
