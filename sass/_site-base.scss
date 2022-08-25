@@ -1,4 +1,4 @@
-
+@import "_variables.scss";
 /*MAIN*/
 
  * {
@@ -105,45 +105,45 @@ footer {
       opacity: 0.3;
       background-image: linear-gradient(
         0deg,
-        #9356dc 10%,
+        $firstcolor 10%,
         white 20%,
-        #ff79da 100%
+        $secondcolor 100%
       );
     }
     20% {
       opacity: 0.4;
       background-image: linear-gradient(
         0deg,
-        #9356dc 10%,
+        $firstcolor 10%,
         white 40%,
-        #ff79da 100%
+        $secondcolor 100%
       );
     }
     50% {
       opacity: 0.6;
       background-image: linear-gradient(
         0deg,
-        #9356dc 10%,
+        $firstcolor 10%,
         white 60%,
-        #ff79da 100%
+        $secondcolor 100%
       );
     }
     70% {
       opacity: 0.8;
       background-image: linear-gradient(
         0deg,
-        #9356dc 10%,
+        $firstcolor 10%,
         white 80%,
-        #ff79da 100%
+        $secondcolor 100%
       );
     }
     100% {
       opacity: 1;
       background-image: linear-gradient(
         0deg,
-        #9356dc 10%,
+        $firstcolor 10%,
         white 100%,
-        #ff79da 100%
+        $secondcolor 100%
       );
     }
   }

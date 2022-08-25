@@ -1,19 +1,14 @@
 @use "_site-base.scss";
+@use "_key-frames.scss";
+@import "_variables.scss";
 
-@keyframes quarterspin { /*rotate check point*/
-  0% {
-    transform: rotate(-270deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
+
 
 
 
 
 body {
-  background-color: #f6f6f6;
+  background-color: $bloccolor;
 }
 
 header {
@@ -54,7 +49,6 @@ header {
 .cover {
   display: flex;
   justify-content: center;
-  background-color: aquamarine;
   .cover_img {
     width: 100%;
     object-fit: cover;
@@ -66,7 +60,7 @@ header {
 
 .container {
   display: flex;
-  background-color: #f6f6f6;
+  background-color: $bloccolor;
 
   .title_restaurant {
     .menu_title {
@@ -80,7 +74,7 @@ header {
         top: 31px;
       }
       .fa-heart:active {
-        background-image: linear-gradient(90deg, #9356dc, #ff79da);
+        background-image: linear-gradient(90deg, $firstcolor, $secondcolor);
         animation: heartcolor 0.3s ease;
         background-clip: text;
         color: transparent;
@@ -96,7 +90,7 @@ header {
   }
 
   main {
-    background-color: #f6f6f6;
+    background-color: $bloccolor;
     border-radius: 30px 30px 0px 0px;
     width: 100%;
     position: relative;
@@ -118,7 +112,7 @@ header {
         border: 0;
 
         .menu_title {
-          border-bottom: 3px solid #99e2d0;
+          border-bottom: 3px solid $thirdcolor;
           padding-bottom: 5px;
           width: 45px;
           font-family: "Roboto-light";
@@ -174,7 +168,7 @@ header {
             justify-content: center;
             align-items: center;
             $button-width: 4rem; /*changer en px*/
-            background-color: #99e2d0;
+            background-color: $thirdcolor;
             margin-right: -1 * $button-width; /*changer en px*/
             width: $button-width;
             border-radius: 0 1rem 1rem 0; /*changer en px*/
@@ -188,7 +182,7 @@ header {
               aspect-ratio: 1 /1;
               width: 1.5rem;
               border-radius: 1rem;
-              color: #99e2d0;
+              color: $thirdcolor;
               font-size: 29px;
             }
           }
@@ -213,7 +207,7 @@ header {
   margin-bottom: 90px;
 
   button {
-    background-image: linear-gradient(90deg, #9356dc, #ff79da);
+    background-image: linear-gradient(90deg, $firstcolor, $secondcolor);
     border: none;
     border-radius: 38px;
     height: 46px;

@@ -1,4 +1,9 @@
+
 @use "_site-base.scss";
+@use "_key-frames.scss";
+@import "_variables.scss";
+
+
 
 .loader {
   position: fixed;
@@ -15,63 +20,7 @@
   align-items: center;
   justify-content: center;
 
-  @keyframes disappear {
-    to {
-      transform: scale(0);
-    }
-  }
-  .spinner {
-    width: 100px;
-    height: 100px;
-    position: relative;
 
-    animation: 2s;
-
-    div {
-      box-sizing: border-box;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border: 10px solid transparent;
-      border-top-color: #9356dc;
-      border-radius: 50%;
-      animation: spinnerOne 1.2s linear infinite;
-    }
-    div:nth-child(2) {
-      border: 8px solid transparent;
-      border-bottom-color: #9356dc;
-      animation: spinnerTwo 1.2s linear infinite;
-    }
-
-    @keyframes spinnerOne {
-      0% {
-        transform: rotate(0deg);
-        border-width: 10px;
-      }
-      50% {
-        transform: rotate(180deg);
-        border-width: 1px;
-      }
-      100% {
-        transform: rotate(360deg);
-        border-width: 10px;
-      }
-    }
-    @keyframes spinnerTwo {
-      0% {
-        transform: rotate(0deg);
-        border-width: 1px;
-      }
-      50% {
-        transform: rotate(180deg);
-        border-width: 10px;
-      }
-      100% {
-        transform: rotate(360deg);
-        border-width: 1px;
-      }
-    }
-  }
 }
 
 header {
@@ -109,7 +58,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #f6f6f6;
+  background-color: $bloccolor;
   h1 {
     text-align: center;
     font-family: "Roboto-medium";
@@ -136,9 +85,9 @@ header {
 
       background-image: linear-gradient(
         to right,
-        #ff79da 0%,
-        #9356dc 51%,
-        #ff79da 100%
+        $secondcolor 0%,
+        $firstcolor 51%,
+        $secondcolor 100%
       );
       margin: 10px;
       text-align: center;
@@ -175,7 +124,7 @@ aside {
     flex-direction: column;
     a {
       font-family: "Roboto-medium";
-      background-color: #f6f6f6;
+      background-color: $bloccolor;
       padding: 25px 2px 25px 2px;
       border: none;
       margin: 5px 20px 20px 20px;
@@ -184,8 +133,8 @@ aside {
       cursor: pointer;
 
       .numberorder {
-        background-color: #9356dc;
-        color: #f6f6f6;
+        background-color: $firstcolor;
+        color: $bloccolor;
         position: absolute;
         padding: 5px 10px 5px 10px;
         border-radius: 41px;
@@ -222,7 +171,7 @@ aside {
 }
 main {
   section {
-    background-color: #f6f6f6;
+    background-color: $bloccolor;
     padding-top: 30px;
     padding-left: 15px;
     h3 {
@@ -255,7 +204,7 @@ main {
             top: 13px;
             right: 8px;
             color: #008766;
-            background-color: #99e2d0;
+            background-color: $thirdcolor;
             padding: 8px 10px 8px 10px;
             border-radius: 3px;
           }
@@ -278,59 +227,13 @@ main {
               padding: 0.2em;
             }
             .fa-heart:active {
-              background-image: linear-gradient(90deg, #9356dc, #ff79da);
+              background-image: linear-gradient(90deg, $firstcolor, $secondcolor);
               animation: heartcolor 0.3s ease;
               background-clip: text;
               color: transparent;
               font-weight: bolder; /*le coeur devient violet*/
               cursor: pointer;
-                        @keyframes heartcolor {
-              0% {
-                opacity: 0.3;
-                background-image: linear-gradient(
-                  0deg,
-                  #9356dc 10%,
-                  white 20%,
-                  #ff79da 100%
-                );
-              }
-              20% {
-                opacity: 0.4;
-                background-image: linear-gradient(
-                  0deg,
-                  #9356dc 10%,
-                  white 40%,
-                  #ff79da 100%
-                );
-              }
-              50% {
-                opacity: 0.6;
-                background-image: linear-gradient(
-                  0deg,
-                  #9356dc 10%,
-                  white 60%,
-                  #ff79da 100%
-                );
-              }
-              70% {
-                opacity: 0.8;
-                background-image: linear-gradient(
-                  0deg,
-                  #9356dc 10%,
-                  white 80%,
-                  #ff79da 100%
-                );
-              }
-              100% {
-                opacity: 1;
-                background-image: linear-gradient(
-                  0deg,
-                  #9356dc 10%,
-                  white 100%,
-                  #ff79da 100%
-                );
-              }
-            }
+
           }
 
           

@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/*FONTS*/
+/*COLORS*/
+/*LOADING SETTINGS*/
 /*MAIN*/
 * {
   margin: 0;
@@ -96,6 +99,83 @@ footer ul li:hover {
 @keyframes heartcolor {
   0% {
     opacity: 0.3;
+    background-image: linear-gradient(0deg, #9356DC 10%, white 20%, #FF79DA 100%);
+  }
+  20% {
+    opacity: 0.4;
+    background-image: linear-gradient(0deg, #9356DC 10%, white 40%, #FF79DA 100%);
+  }
+  50% {
+    opacity: 0.6;
+    background-image: linear-gradient(0deg, #9356DC 10%, white 60%, #FF79DA 100%);
+  }
+  70% {
+    opacity: 0.8;
+    background-image: linear-gradient(0deg, #9356DC 10%, white 80%, #FF79DA 100%);
+  }
+  100% {
+    opacity: 1;
+    background-image: linear-gradient(0deg, #9356DC 10%, white 100%, #FF79DA 100%);
+  }
+}
+@keyframes disappear {
+  to {
+    transform: scale(0);
+  }
+}
+.spinner {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation: 2s;
+}
+.spinner div {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 10px solid transparent;
+  border-top-color: #9356dc;
+  border-radius: 50%;
+  animation: spinnerOne 1.2s linear infinite;
+}
+.spinner div:nth-child(2) {
+  border: 8px solid transparent;
+  border-bottom-color: #9356dc;
+  animation: spinnerTwo 1.2s linear infinite;
+}
+@keyframes spinnerOne {
+  0% {
+    transform: rotate(0deg);
+    border-width: 10px;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 1px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 10px;
+  }
+}
+@keyframes spinnerTwo {
+  0% {
+    transform: rotate(0deg);
+    border-width: 1px;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 10px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 1px;
+  }
+}
+
+@keyframes heartcolor {
+  0% {
+    opacity: 0.3;
     background-image: linear-gradient(0deg, #9356dc 10%, white 20%, #ff79da 100%);
   }
   20% {
@@ -123,6 +203,9 @@ footer ul li:hover {
     transform: rotate(0);
   }
 }
+/*FONTS*/
+/*COLORS*/
+/*LOADING SETTINGS*/
 body {
   background-color: #f6f6f6;
 }
@@ -162,7 +245,6 @@ header h1 span {
 .cover {
   display: flex;
   justify-content: center;
-  background-color: aquamarine;
 }
 .cover .cover_img {
   width: 100%;
@@ -186,7 +268,7 @@ header h1 span {
   top: 31px;
 }
 .container .title_restaurant .menu_title .fa-heart:active {
-  background-image: linear-gradient(90deg, #9356dc, #ff79da);
+  background-image: linear-gradient(90deg, #9356DC, #FF79DA);
   animation: heartcolor 0.3s ease;
   background-clip: text;
   color: transparent;
@@ -238,7 +320,7 @@ header h1 span {
   border: 0;
 }
 .container main section .menu .menu_title {
-  border-bottom: 3px solid #99e2d0;
+  border-bottom: 3px solid #99E2D0;
   padding-bottom: 5px;
   width: 45px;
   font-family: "Roboto-light";
@@ -293,7 +375,7 @@ header h1 span {
   justify-content: center;
   align-items: center;
   /*changer en px*/
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   margin-right: -4rem; /*changer en px*/
   width: 4rem;
   border-radius: 0 1rem 1rem 0; /*changer en px*/
@@ -308,7 +390,7 @@ header h1 span {
   aspect-ratio: 1/1;
   width: 1.5rem;
   border-radius: 1rem;
-  color: #99e2d0;
+  color: #99E2D0;
   font-size: 29px;
 }
 .container main section .menu .bloc__content:hover .bloc__content__check {
@@ -325,7 +407,7 @@ header h1 span {
   margin-bottom: 90px;
 }
 .button__buy button {
-  background-image: linear-gradient(90deg, #9356dc, #ff79da);
+  background-image: linear-gradient(90deg, #9356DC, #FF79DA);
   border: none;
   border-radius: 38px;
   height: 46px;

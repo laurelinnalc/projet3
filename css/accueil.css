@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/*FONTS*/
+/*COLORS*/
+/*LOADING SETTINGS*/
 /*MAIN*/
 * {
   margin: 0;
@@ -96,52 +99,37 @@ footer ul li:hover {
 @keyframes heartcolor {
   0% {
     opacity: 0.3;
-    background-image: linear-gradient(0deg, #9356dc 10%, white 20%, #ff79da 100%);
+    background-image: linear-gradient(0deg, #9356DC 10%, white 20%, #FF79DA 100%);
   }
   20% {
     opacity: 0.4;
-    background-image: linear-gradient(0deg, #9356dc 10%, white 40%, #ff79da 100%);
+    background-image: linear-gradient(0deg, #9356DC 10%, white 40%, #FF79DA 100%);
   }
   50% {
     opacity: 0.6;
-    background-image: linear-gradient(0deg, #9356dc 10%, white 60%, #ff79da 100%);
+    background-image: linear-gradient(0deg, #9356DC 10%, white 60%, #FF79DA 100%);
   }
   70% {
     opacity: 0.8;
-    background-image: linear-gradient(0deg, #9356dc 10%, white 80%, #ff79da 100%);
+    background-image: linear-gradient(0deg, #9356DC 10%, white 80%, #FF79DA 100%);
   }
   100% {
     opacity: 1;
-    background-image: linear-gradient(0deg, #9356dc 10%, white 100%, #ff79da 100%);
+    background-image: linear-gradient(0deg, #9356DC 10%, white 100%, #FF79DA 100%);
   }
-}
-.loader {
-  position: fixed;
-  background-color: #ffffff;
-  opacity: 0.9;
-  height: 100vh;
-  inset: 0;
-  z-index: 1;
-  animation: disappear 0.5s;
-  animation-delay: 1.5s;
-  animation-fill-mode: forwards;
-  transform-origin: bottom right 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 @keyframes disappear {
   to {
     transform: scale(0);
   }
 }
-.loader .spinner {
+.spinner {
   width: 100px;
   height: 100px;
   position: relative;
   animation: 2s;
 }
-.loader .spinner div {
+.spinner div {
   box-sizing: border-box;
   position: absolute;
   width: 100%;
@@ -151,7 +139,7 @@ footer ul li:hover {
   border-radius: 50%;
   animation: spinnerOne 1.2s linear infinite;
 }
-.loader .spinner div:nth-child(2) {
+.spinner div:nth-child(2) {
   border: 8px solid transparent;
   border-bottom-color: #9356dc;
   animation: spinnerTwo 1.2s linear infinite;
@@ -183,6 +171,55 @@ footer ul li:hover {
     transform: rotate(360deg);
     border-width: 1px;
   }
+}
+
+@keyframes heartcolor {
+  0% {
+    opacity: 0.3;
+    background-image: linear-gradient(0deg, #9356dc 10%, white 20%, #ff79da 100%);
+  }
+  20% {
+    opacity: 0.4;
+    background-image: linear-gradient(0deg, #9356dc 10%, white 40%, #ff79da 100%);
+  }
+  50% {
+    opacity: 0.6;
+    background-image: linear-gradient(0deg, #9356dc 10%, white 60%, #ff79da 100%);
+  }
+  70% {
+    opacity: 0.8;
+    background-image: linear-gradient(0deg, #9356dc 10%, white 80%, #ff79da 100%);
+  }
+  100% {
+    opacity: 1;
+    background-image: linear-gradient(0deg, #9356dc 10%, white 100%, #ff79da 100%);
+  }
+}
+@keyframes quarterspin { /*rotate check point*/
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+/*FONTS*/
+/*COLORS*/
+/*LOADING SETTINGS*/
+.loader {
+  position: fixed;
+  background-color: #ffffff;
+  opacity: 0.9;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  animation: disappear 0.5s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  transform-origin: bottom right 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 header {
@@ -243,7 +280,7 @@ header .logo {
 }
 .info_top .button__selection__explore {
   font-family: "Roboto-medium";
-  background-image: linear-gradient(to right, #ff79da 0%, #9356dc 51%, #ff79da 100%);
+  background-image: linear-gradient(to right, #FF79DA 0%, #9356DC 51%, #FF79DA 100%);
   margin: 10px;
   text-align: center;
   background-size: 200% auto;
@@ -287,7 +324,7 @@ aside .button_fonction a {
   cursor: pointer;
 }
 aside .button_fonction a .numberorder {
-  background-color: #9356dc;
+  background-color: #9356DC;
   color: #f6f6f6;
   position: absolute;
   padding: 5px 10px 5px 10px;
@@ -350,7 +387,7 @@ main section .card_restaurant .card_item .card_info .new {
   top: 13px;
   right: 8px;
   color: #008766;
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   padding: 8px 10px 8px 10px;
   border-radius: 3px;
 }
@@ -372,34 +409,12 @@ main section .card_restaurant .card_item .card_info h4 .fa-heart {
   padding: 0.2em;
 }
 main section .card_restaurant .card_item .card_info h4 .fa-heart:active {
-  background-image: linear-gradient(90deg, #9356dc, #ff79da);
+  background-image: linear-gradient(90deg, #9356DC, #FF79DA);
   animation: heartcolor 0.3s ease;
   background-clip: text;
   color: transparent;
   font-weight: bolder; /*le coeur devient violet*/
   cursor: pointer;
-}
-@keyframes heartcolor {
-  0% {
-    opacity: 0.3;
-    background-image: linear-gradient(0deg, #9356dc 10%, white 20%, #ff79da 100%);
-  }
-  20% {
-    opacity: 0.4;
-    background-image: linear-gradient(0deg, #9356dc 10%, white 40%, #ff79da 100%);
-  }
-  50% {
-    opacity: 0.6;
-    background-image: linear-gradient(0deg, #9356dc 10%, white 60%, #ff79da 100%);
-  }
-  70% {
-    opacity: 0.8;
-    background-image: linear-gradient(0deg, #9356dc 10%, white 80%, #ff79da 100%);
-  }
-  100% {
-    opacity: 1;
-    background-image: linear-gradient(0deg, #9356dc 10%, white 100%, #ff79da 100%);
-  }
 }
 main section .card_restaurant .card_item .card_info p {
   font-family: "Roboto-light";

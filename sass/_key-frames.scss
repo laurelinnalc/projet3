@@ -1,59 +1,117 @@
-@keyframes loading {
-  0% {
-    opacity: 0;
-  }
-
-  90% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-
-  90% {
-    opacity: 1;
-  }
-
-  100% {
-    transform: rotate(720deg);
-    opacity: 0;
-  }
-}
 
 
-
-
-@keyframes fadeIn {
-  
-  
-  
-  0% {
-    opacity: 0.3;
+@keyframes disappear {
+  to {
     transform: scale(0);
   }
-  100% {
-    opacity: 1;
-    transform: scale(1);
+}
+.spinner {
+  width: 100px;
+  height: 100px;
+  position: relative;
+
+  animation: 2s;
+
+  div {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 10px solid transparent;
+    border-top-color: #9356dc;
+    border-radius: 50%;
+    animation: spinnerOne 1.2s linear infinite;
+  }
+  div:nth-child(2) {
+    border: 8px solid transparent;
+    border-bottom-color: #9356dc;
+    animation: spinnerTwo 1.2s linear infinite;
+  }
+
+  @keyframes spinnerOne {
+    0% {
+      transform: rotate(0deg);
+      border-width: 10px;
+    }
+    50% {
+      transform: rotate(180deg);
+      border-width: 1px;
+    }
+    100% {
+      transform: rotate(360deg);
+      border-width: 10px;
+    }
+  }
+  @keyframes spinnerTwo {
+    0% {
+      transform: rotate(0deg);
+      border-width: 1px;
+    }
+    50% {
+      transform: rotate(180deg);
+      border-width: 10px;
+    }
+    100% {
+      transform: rotate(360deg);
+      border-width: 1px;
+    }
   }
 }
 
-@keyframes fadeUp {
-  /* scattering */
+
+@keyframes heartcolor {
   0% {
-    transform: translateY(0.3rem);
-    opacity: 0;
+    opacity: 0.3;
+    background-image: linear-gradient(
+      0deg,
+      #9356dc 10%,
+      white 20%,
+      #ff79da 100%
+    );
+  }
+  20% {
+    opacity: 0.4;
+    background-image: linear-gradient(
+      0deg,
+      #9356dc 10%,
+      white 40%,
+      #ff79da 100%
+    );
+  }
+  50% {
+    opacity: 0.6;
+    background-image: linear-gradient(
+      0deg,
+      #9356dc 10%,
+      white 60%,
+      #ff79da 100%
+    );
+  }
+  70% {
+    opacity: 0.8;
+    background-image: linear-gradient(
+      0deg,
+      #9356dc 10%,
+      white 80%,
+      #ff79da 100%
+    );
   }
   100% {
-    transform: translateY(0);
     opacity: 1;
+    background-image: linear-gradient(
+      0deg,
+      #9356dc 10%,
+      white 100%,
+      #ff79da 100%
+    );
   }
 }
 
+@keyframes quarterspin { /*rotate check point*/
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}

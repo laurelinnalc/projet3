@@ -1,3 +1,6 @@
+/*FONTS*/
+/*COLORS*/
+/*LOADING SETTINGS*/
 /*MAIN*/
 * {
   margin: 0;
@@ -95,6 +98,83 @@ footer ul li:hover {
 @keyframes heartcolor {
   0% {
     opacity: 0.3;
+    background-image: linear-gradient(0deg, #9356DC 10%, white 20%, #FF79DA 100%);
+  }
+  20% {
+    opacity: 0.4;
+    background-image: linear-gradient(0deg, #9356DC 10%, white 40%, #FF79DA 100%);
+  }
+  50% {
+    opacity: 0.6;
+    background-image: linear-gradient(0deg, #9356DC 10%, white 60%, #FF79DA 100%);
+  }
+  70% {
+    opacity: 0.8;
+    background-image: linear-gradient(0deg, #9356DC 10%, white 80%, #FF79DA 100%);
+  }
+  100% {
+    opacity: 1;
+    background-image: linear-gradient(0deg, #9356DC 10%, white 100%, #FF79DA 100%);
+  }
+}
+@keyframes disappear {
+  to {
+    transform: scale(0);
+  }
+}
+.spinner {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation: 2s;
+}
+.spinner div {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 10px solid transparent;
+  border-top-color: #9356dc;
+  border-radius: 50%;
+  animation: spinnerOne 1.2s linear infinite;
+}
+.spinner div:nth-child(2) {
+  border: 8px solid transparent;
+  border-bottom-color: #9356dc;
+  animation: spinnerTwo 1.2s linear infinite;
+}
+@keyframes spinnerOne {
+  0% {
+    transform: rotate(0deg);
+    border-width: 10px;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 1px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 10px;
+  }
+}
+@keyframes spinnerTwo {
+  0% {
+    transform: rotate(0deg);
+    border-width: 1px;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 10px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 1px;
+  }
+}
+
+@keyframes heartcolor {
+  0% {
+    opacity: 0.3;
     background-image: linear-gradient(0deg, #9356dc 10%, white 20%, #ff79da 100%);
   }
   20% {
@@ -114,6 +194,17 @@ footer ul li:hover {
     background-image: linear-gradient(0deg, #9356dc 10%, white 100%, #ff79da 100%);
   }
 }
+@keyframes quarterspin { /*rotate check point*/
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+/*FONTS*/
+/*COLORS*/
+/*LOADING SETTINGS*/
 aside h3 {
   display: flex;
   justify-content: center;
@@ -150,7 +241,7 @@ section .card_restaurant .card_item {
   margin-right: 30px;
 }
 section .card_restaurant .card_item .fa-heart:hover {
-  background-image: linear-gradient(90deg, #9356dc, #ff79da);
+  background-image: linear-gradient(90deg, #9356DC, #FF79DA);
   animation: heartcolor 0.3s ease;
   background-clip: text;
   color: transparent;
