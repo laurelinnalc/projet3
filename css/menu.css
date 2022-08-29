@@ -204,6 +204,38 @@ footer ul li:hover {
     transform: rotate(0);
   }
 }
+@keyframes appear {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  from {
+    background-color: white;
+    opacity: 0.2;
+  }
+  to {
+    background-color: white;
+    opacity: 1;
+  }
+}
 /*FONTS*/
 /*COLORS*/
 /*LOADING SETTINGS*/
@@ -269,7 +301,7 @@ header h1 span {
   top: 31px;
 }
 .container .title_restaurant .menu_title .fa-heart:active {
-  background-image: linear-gradient(90deg, #9356dc, #ff79da);
+  background-image: linear-gradient(45deg, #9356dc, #ff79da);
   animation: heartcolor 0.3s ease;
   background-clip: text;
   -webkit-background-clip: text;
@@ -289,34 +321,51 @@ header h1 span {
 .container main section {
   display: block;
   overflow: hidden;
-  animation-delay: 3s;
 }
 .container main section .bloc_element.menu1 {
+  opacity: 0;
   animation: 0.9s appear 0.2s;
+  animation-fill-mode: forwards;
 }
 .container main section .bloc_element.menu2 {
+  opacity: 0;
   animation: 0.9s appear 0.4s;
+  animation-fill-mode: forwards;
 }
 .container main section .bloc_element.menu3 {
+  opacity: 0;
   animation: 0.9s appear 0.6s;
+  animation-fill-mode: forwards;
 }
 .container main section .bloc_element.menu4 {
+  opacity: 0;
   animation: 0.9s appear 0.8s;
+  animation-fill-mode: forwards;
 }
 .container main section .bloc_element.menu5 {
+  opacity: 0;
   animation: 0.9s appear 1s;
+  animation-fill-mode: forwards;
 }
 .container main section .bloc_element.menu6 {
+  opacity: 0;
   animation: 0.9s appear 1.2s;
+  animation-fill-mode: forwards;
 }
 .container main section .bloc_element.menu7 {
+  opacity: 0;
   animation: 0.9s appear 1.4s;
+  animation-fill-mode: forwards;
 }
 .container main section .bloc_element.menu8 {
+  opacity: 0;
   animation: 0.9s appear 1.6s;
+  animation-fill-mode: forwards;
 }
 .container main section .bloc_element.menu9 {
+  opacity: 0;
   animation: 0.9s appear 1.8s;
+  animation-fill-mode: forwards;
 }
 .container main section .menu {
   border: 0;
@@ -336,6 +385,7 @@ header h1 span {
   border-radius: 1rem; /*changer en px*/
   overflow: hidden;
   margin-bottom: 15px;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1803921569);
   cursor: pointer;
 }
 .container main section .menu .bloc__content__item {
@@ -395,6 +445,7 @@ header h1 span {
   border-radius: 1rem;
   color: #99e2d0;
   font-size: 29px;
+  line-height: 0.9;
 }
 .container main section .menu .bloc__content:hover .bloc__content__check {
   margin-right: 0;
@@ -410,7 +461,7 @@ header h1 span {
   margin-bottom: 90px;
 }
 .button__buy button {
-  background-image: linear-gradient(90deg, #9356dc, #ff79da);
+  background-image: linear-gradient(45deg, #9356dc, #ff79da);
   border: none;
   border-radius: 38px;
   height: 46px;

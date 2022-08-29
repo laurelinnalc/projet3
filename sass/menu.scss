@@ -69,7 +69,7 @@ header {
         top: 31px;
       }
       .fa-heart:active {
-        background-image: linear-gradient(90deg, $firstcolor, $secondcolor);
+        background-image: linear-gradient(45deg, $firstcolor, $secondcolor);
         animation: heartcolor 0.3s ease;
         background-clip: text;
         -webkit-background-clip: text;
@@ -78,6 +78,7 @@ header {
         cursor: pointer;
       }
     }
+    
   }
 
   main {
@@ -92,10 +93,14 @@ header {
     section {
       display: block;
       overflow: hidden;
-      animation-delay: 3s;
+      //animation: fadein 2s;
+      //animation-duration: 2s; /*durée animation pour parcourir un cycle*/
+      //animation-iteration-count: 0; /*nb cycles pr répéter une animation*/
       @for $i from 1 through 9 {
         .bloc_element.menu#{$i} {
+          opacity: 0;
           animation: 0.9s appear (0.2s * $i);
+          animation-fill-mode: forwards;
         }
       }
 
@@ -117,6 +122,7 @@ header {
           border-radius: 1rem; /*changer en px*/
           overflow: hidden;
           margin-bottom: 15px;
+         box-shadow: 0px 2px 3px #0000002e;
           cursor: pointer;
           &__item {
             display: flex;
@@ -176,6 +182,7 @@ header {
               border-radius: 1rem;
               color: $thirdcolor;
               font-size: 29px;
+              line-height: 0.9;
             }
           }
           &:hover {
@@ -199,7 +206,7 @@ header {
   margin-bottom: 90px;
 
   button {
-    background-image: linear-gradient(90deg, $firstcolor, $secondcolor);
+    background-image: linear-gradient(45deg, $firstcolor, $secondcolor);
     border: none;
     border-radius: 38px;
     height: 46px;

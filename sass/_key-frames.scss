@@ -113,3 +113,40 @@
     transform: rotate(0);
   }
 }
+
+@keyframes appear {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+
+  }
+}
+@keyframes fadein {
+  from {
+    
+    background-color: white;
+    opacity: 0.2;
+
+  }
+ to {
+    background-color: white;
+    opacity: 1;
+
+  }
+}
