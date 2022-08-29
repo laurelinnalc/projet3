@@ -100,7 +100,7 @@ header {
         .bloc_element.menu#{$i} {
           opacity: 0;
           animation: 0.9s appear (0.2s * $i);
-          animation-fill-mode: forwards;
+               animation-fill-mode: forwards;
         }
       }
 
