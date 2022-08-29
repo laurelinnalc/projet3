@@ -1,9 +1,7 @@
 @use "_site-base.scss";
 @use "_key-frames.scss";
 
-
 aside {
-
   h3 {
     display: flex;
     justify-content: center;
@@ -13,44 +11,40 @@ aside {
   .bloc_fonction {
     display: flex;
     justify-content: center;
-  
-  .button_fonction {
-    width: 60%;
-  
 
-    a {
-      .numberorder {
-        margin: 0px 0px 0px -17px;
-        margin-top: -2px;
+    .button_fonction {
+      width: 60%;
+
+      a {
+        .numberorder {
+          margin: 0px 0px 0px -17px;
+          margin-top: -2px;
+        }
+
+        p span {
+          font-size: 0.9em;
+        }
       }
-
-      p span {
-        font-size: 0.9em;
-      }
-
-
     }
   }
-} 
   p {
     display: flex;
     justify-content: center;
     padding-right: 20px;
 
     i.fa-solid.fa-list {
-        padding-right: 30px;
-        padding-left: 15px;
+      padding-right: 30px;
+      padding-left: 15px;
     }
     i.fa-solid.fa-mobile-screen-button {
-        padding-right: 15px;
-        padding-left: 30px;
-        margin-right: 20px;
+      padding-right: 15px;
+      padding-left: 30px;
+      margin-right: 20px;
     }
     i.fa-solid.fa-store {
-        padding-right: 30px;
+      padding-right: 30px;
     }
   }
-
 }
 section {
   h3 {
@@ -59,15 +53,11 @@ section {
     margin-bottom: 25px;
   }
   .card_restaurant {
-
-
     .card_item {
       display: flex;
       width: 80%;
       margin-right: 30px;
       margin-left: 70px;
-
-
     }
   }
 }
@@ -79,5 +69,4 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }

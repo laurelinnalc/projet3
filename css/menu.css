@@ -99,23 +99,23 @@ footer ul li:hover {
 @keyframes heartcolor {
   0% {
     opacity: 0.3;
-    background-image: linear-gradient(0deg, #9356DC 10%, white 20%, #FF79DA 100%);
+    background-image: linear-gradient(0deg, #9356dc 10%, white 20%, #ff79da 100%);
   }
   20% {
     opacity: 0.4;
-    background-image: linear-gradient(0deg, #9356DC 10%, white 40%, #FF79DA 100%);
+    background-image: linear-gradient(0deg, #9356dc 10%, white 40%, #ff79da 100%);
   }
   50% {
     opacity: 0.6;
-    background-image: linear-gradient(0deg, #9356DC 10%, white 60%, #FF79DA 100%);
+    background-image: linear-gradient(0deg, #9356dc 10%, white 60%, #ff79da 100%);
   }
   70% {
     opacity: 0.8;
-    background-image: linear-gradient(0deg, #9356DC 10%, white 80%, #FF79DA 100%);
+    background-image: linear-gradient(0deg, #9356dc 10%, white 80%, #ff79da 100%);
   }
   100% {
     opacity: 1;
-    background-image: linear-gradient(0deg, #9356DC 10%, white 100%, #FF79DA 100%);
+    background-image: linear-gradient(0deg, #9356dc 10%, white 100%, #ff79da 100%);
   }
 }
 @keyframes disappear {
@@ -195,7 +195,8 @@ footer ul li:hover {
     background-image: linear-gradient(0deg, #9356dc 10%, white 100%, #ff79da 100%);
   }
 }
-@keyframes quarterspin { /*rotate check point*/
+@keyframes quarterspin {
+  /*rotate check point*/
   0% {
     transform: rotate(-270deg);
   }
@@ -268,9 +269,10 @@ header h1 span {
   top: 31px;
 }
 .container .title_restaurant .menu_title .fa-heart:active {
-  background-image: linear-gradient(90deg, #9356DC, #FF79DA);
+  background-image: linear-gradient(90deg, #9356dc, #ff79da);
   animation: heartcolor 0.3s ease;
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   font-weight: bolder; /*le coeur devient violet*/
   cursor: pointer;
@@ -320,7 +322,7 @@ header h1 span {
   border: 0;
 }
 .container main section .menu .menu_title {
-  border-bottom: 3px solid #99E2D0;
+  border-bottom: 3px solid #99e2d0;
   padding-bottom: 5px;
   width: 45px;
   font-family: "Roboto-light";
@@ -353,7 +355,8 @@ header h1 span {
   padding: 1rem;
   overflow: hidden;
 }
-.container main section .menu .bloc__content__details h4, .container main section .menu .bloc__content__details p {
+.container main section .menu .bloc__content__details h4,
+.container main section .menu .bloc__content__details p {
   overflow: hidden;
   white-space: nowrap; /*Force le texte à rester sur une ligne*/
   text-overflow: ellipsis;
@@ -375,7 +378,7 @@ header h1 span {
   justify-content: center;
   align-items: center;
   /*changer en px*/
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   margin-right: -4rem; /*changer en px*/
   width: 4rem;
   border-radius: 0 1rem 1rem 0; /*changer en px*/
@@ -390,7 +393,7 @@ header h1 span {
   aspect-ratio: 1/1;
   width: 1.5rem;
   border-radius: 1rem;
-  color: #99E2D0;
+  color: #99e2d0;
   font-size: 29px;
 }
 .container main section .menu .bloc__content:hover .bloc__content__check {
@@ -407,7 +410,7 @@ header h1 span {
   margin-bottom: 90px;
 }
 .button__buy button {
-  background-image: linear-gradient(90deg, #9356DC, #FF79DA);
+  background-image: linear-gradient(90deg, #9356dc, #ff79da);
   border: none;
   border-radius: 38px;
   height: 46px;

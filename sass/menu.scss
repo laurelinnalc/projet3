@@ -2,11 +2,6 @@
 @use "_key-frames.scss";
 @import "_variables.scss";
 
-
-
-
-
-
 body {
   background-color: $bloccolor;
 }
@@ -77,15 +72,11 @@ header {
         background-image: linear-gradient(90deg, $firstcolor, $secondcolor);
         animation: heartcolor 0.3s ease;
         background-clip: text;
+        -webkit-background-clip: text;
         color: transparent;
         font-weight: bolder; /*le coeur devient violet*/
         cursor: pointer;
-
-
       }
-
-
-
     }
   }
 
@@ -145,7 +136,8 @@ header {
             padding: 1rem;
             overflow: hidden;
 
-            h4, p {
+            h4,
+            p {
               overflow: hidden;
               white-space: nowrap; /*Force le texte à rester sur une ligne*/
               text-overflow: ellipsis;

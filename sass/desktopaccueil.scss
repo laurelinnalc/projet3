@@ -43,18 +43,14 @@ section {
       width: 35%;
       margin-right: 30px;
 
-      .fa-heart:hover {     
+      .fa-heart:hover {
         background-image: linear-gradient(90deg, $firstcolor, $secondcolor);
         animation: heartcolor 0.3s ease;
         background-clip: text;
+        -webkit-background-clip: text;
         color: transparent;
         font-weight: bolder; /*le coeur devient violet*/
         cursor: pointer;
-
-
-      
-
-
       }
     }
   }
@@ -67,5 +63,4 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
